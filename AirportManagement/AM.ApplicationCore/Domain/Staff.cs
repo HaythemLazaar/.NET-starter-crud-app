@@ -12,5 +12,14 @@ namespace AM.ApplicationCore.Domain
         public string Function { get; set; }
         public float Salary { get; set; }
 
+        public override string ToString()
+        {
+            return "Name :" + this.FirstName + " " + this.LastName + "; Function : " + this.Function;
+        }
+
+        public override string PassengerType()
+        {
+            return base.PassengerType() + " I am a Staff Member";
+        }
     }
 }
