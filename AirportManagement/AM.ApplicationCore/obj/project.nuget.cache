@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IZt+NzKzP05pwHMHYXLXMFphz9ehoGeX/tA9ttaLWWCQa4ea2uSE0OrPTTqkIHGXE53wUASkMEcaFshonvB2OQ==",
+  "dgSpecHash": "5RzhpIAbdofCBvYDtFrDKvYzr2HPd41WRQY26io2sFWVU55+HEdubFDRl1NKHuPq7x+uoFWrFM8jc89FSM3CFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hayto\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\Hayto\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",

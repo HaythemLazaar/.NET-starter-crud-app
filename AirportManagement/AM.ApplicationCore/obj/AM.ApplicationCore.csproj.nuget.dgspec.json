@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {}
+    "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
+    "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
         "projectName": "AM.ApplicationCore",
-        "projectPath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+        "projectPath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\Hayto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\AirportManagement-.NET\\AM.ApplicationCore\\obj\\",
+        "outputPath": "C:\\Users\\Hayto\\Desktop\\.NET ESPRIT\\.NET-starter-crud-app\\AirportManagement\\AM.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hayto\\AppData\\Roaming\\NuGet\\NuGet.Config",
