@@ -8,18 +8,17 @@ namespace AM.ApplicationCore.Domain
 {
     public class Staff : Passenger
     {
-        public DateTime EmployementDate { get; set; }
+        public  DateTime EmploymentDate { get; set; }
         public string Function { get; set; }
-        public float Salary { get; set; }
-
+        public double Salary { get; set; }
         public override string ToString()
         {
-            return "Name :" + this.FirstName + " " + this.LastName + "; Function : " + this.Function;
+            return "Employment Date:" + EmploymentDate + "Function: " + Function + "Salary: " + Salary;
         }
-
-        public override string PassengerType()
+        public override void PassengerType()
         {
-            return base.PassengerType() + " I am a Staff Member";
+            base.PassengerType();
+            Console.WriteLine("I am a Staff");
         }
     }
 }

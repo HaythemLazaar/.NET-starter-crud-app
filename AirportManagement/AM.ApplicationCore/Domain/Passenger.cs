@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,39 +9,36 @@ namespace AM.ApplicationCore.Domain
 {
     public class Passenger
     {
-        public DateOnly BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public int PassportNumber { get; set; }
         public string EmailAdress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string TelNumber { get; set; }
-        public ICollection<Flight> Flights { get; set; }
-
+        public int TelNumber { get; set; }
+        public ICollection<Flight> flights { get; set; }
         public override string ToString()
         {
-            return "Name : " + this.FirstName + " " + this.LastName + "; Passport : " + this.PassportNumber;
+            return "First Name= " + FirstName + "Last Name= " + LastName;
         }
-
-        public bool CheckProfile(string firstName, string lastName)
+        //public bool CheckProfile(string firstname, string lastname)
+        //{
+        //    return FirstName == firstname && LastName == lastname;
+        //}
+        //public bool CheckProfile(string firstname, string lastname, string emailadresse)
+        //{
+        //    return FirstName == firstname && LastName == lastname && EmailAdress == emailadresse;
+        //}
+        public bool CheckProfile(string firstname, string lastname, string emailadresse = null)
         {
-            return (firstName == this.FirstName && lastName == this.LastName);
+            if (emailadresse != null)
+                return FirstName == firstname && LastName == lastname && EmailAdress == emailadresse;
+            else
+                return FirstName == firstname && LastName == lastname;
         }
-
-        public bool CheckProfile(string firstName, string lastName, string email)
+        public virtual void PassengerType()
         {
-            return (firstName == this.FirstName 
-                && lastName == this.LastName
-                && email == this.EmailAdress);
-        }
+            Console.WriteLine("I am a Passenger");
 
-        public bool CheckProfile(Passenger passenger)
-        {
-            return (this.Equals(passenger));
-        }
-
-        public virtual string PassengerType()
-        {
-            return "I am a passenger";
         }
     }
 }

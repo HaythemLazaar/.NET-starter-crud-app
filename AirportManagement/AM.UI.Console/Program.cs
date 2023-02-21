@@ -1,61 +1,66 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AM.ApplicationCore.Domain;
+using AM.ApplicationCore.Services;
 
-Plane Plane1 = new Plane()
+//Plane plane= new Plane();
+//plane.Capacity = 200;
+//plane.Type = PlaneType.Boing;
+//plane.ManufactureDate = DateTime.Now;
+////Plane plane1= new Plane(PlaneType.Airbus,300,DateTime.Now);
+////Plane plane2 = new Plane(PlaneType.Airbus, 300, DateTime.Now);
+//Plane plane3 = new Plane
+//{
+//    Type = PlaneType.Airbus,
+//    Capacity = 170,
+//    ManufactureDate = new DateTime(2016, 04, 03)
+//};
+//Console.WriteLine(plane3.ToString());
+Passenger passenger1 = new Passenger
 {
-    Capacity = 1,
-    ManufactureDate = new DateTime(2021, 10, 5),
-    PlaneType = PlaneType.Boing
+    FirstName = "ahmed",
+    LastName = "tlili",
+    EmailAdress = "ahmed.tlili@esprit.tn"
 };
+//Console.WriteLine(passenger1.CheckProfile("Ahmed", "tnyjyt", "ahmed.tlili@esprit.tn"));
+//Traveller traveller1 = new Traveller
+//{
 
-//Plane1.Capacity = 1;
-//Plane1.ManufactureDate = new DateTime(2021, 10, 5);
-//Plane1.PlaneType = PlaneType.Boing;
+//    FirstName = "test",
+//    LastName = "test",
+//    Nationality = "Tunisian"
+//};
+//Console.WriteLine("traveller1: ");
+//traveller1.PassengerType();
+//Staff staff1 = new Staff
+//{
+//    FirstName = "test2",
+//    LastName = "test2",
+//    Salary = 6000.0
+//};
+//Console.WriteLine("Staff1: ");
+//staff1.PassengerType();
+//satgtgtgtg
 
-//Plane Plane2 = new Plane(PlaneType.Airbus, 55, new DateTime(2010, 4, 5));
-
-Plane Plane2 = new Plane()
+ServiceFlight sf = new ServiceFlight();
+sf.flights = TestData.listFlights;
+foreach (var item in sf.GetFlightDates("Paris"))
 {
-    Capacity = 55,
-    ManufactureDate = new DateTime(2010, 4, 5),
-    PlaneType = PlaneType.Airbus
-};
-
-Passenger p1 = new Passenger()
+    Console.WriteLine(item);
+}
+sf.GetFlights("Destination", "Paris");
+sf.FlightDetailsDel(TestData.BoingPlane);
+Console.WriteLine("Total flights :" + sf.ProgrammedFlightNumber(new DateTime(2022, 02, 01)));
+Console.WriteLine("Average estimated time :" + sf.DurationAverageDel("Madrid"));
+foreach(var item in sf.OrderedDurationFlights())
 {
-    PassportNumber = 436346346,
-    FirstName = "HA1",
-    LastName = "HA1"
-};
-
-Traveller p2 = new Traveller()
+    Console.WriteLine(item);
+}
+foreach (var item in sf.SeniorTravellers(TestData.flight1))
 {
-    PassportNumber = 436346347,
-    FirstName = "HA2",
-    LastName = "HA2"
-};
-
-Staff p3 = new Staff()
-{
-    PassportNumber = 436346348,
-    FirstName = "HA3",
-    LastName = "HA3"
-};
-
-
-// Affichage
-
-Console.WriteLine(Plane1.ToString());
-Console.WriteLine(Plane2.ToString());
-Console.WriteLine(p1.ToString());
-Console.WriteLine(p2.ToString());
-Console.WriteLine(p3.ToString());
-Console.WriteLine(p1.PassengerType());
-Console.WriteLine(p2.PassengerType());
-Console.WriteLine(p3.PassengerType());
-
-
-
-
-
+    Console.WriteLine(item);
+}
+sf.DestinationGroupedFlights();
+Console.WriteLine(passenger1.FirstName + passenger1.LastName);
+passenger1.UpperFullName();
+Console.WriteLine(passenger1.FirstName + passenger1.LastName);
 
