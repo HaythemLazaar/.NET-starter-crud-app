@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AM.Infrastructure
 {
-    internal class AMContext : DbContext
+    public class AMContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

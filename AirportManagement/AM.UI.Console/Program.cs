@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AM.ApplicationCore.Domain;
 using AM.ApplicationCore.Services;
+using AM.Infrastructure;
 
+AMContext ctx = new AMContext();
 //Plane plane= new Plane();
 //plane.Capacity = 200;
 //plane.Type = PlaneType.Boing;
@@ -63,4 +65,7 @@ sf.DestinationGroupedFlights();
 Console.WriteLine(passenger1.FirstName + passenger1.LastName);
 passenger1.UpperFullName();
 Console.WriteLine(passenger1.FirstName + passenger1.LastName);
+
+ctx.flights.Add(TestData.flight1);
+ctx.SaveChanges();
 
